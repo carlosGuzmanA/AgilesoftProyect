@@ -1,0 +1,27 @@
+<div class="container">
+
+    <h1 *ngIf="dataPeli.title.length > 0">{{dataPeli.title}}</h1>
+    <br>
+    <div align="center" class="imagenPortada">
+            <img [src]="dataPeli.imagenUrlPoster" alt="" height="600px" width="1000px" >
+    </div>
+    <br>
+    <div class="row" align="center">   
+        <p >
+            <img [src]="dataPeli.imagenUrl" width="300px" align="left">{{dataPeli.overview}}
+            </p>
+    </div>
+    
+    <div class="row" style="margin: auto;">
+        <div class="col-md-12">
+            <div class="wrapper" *ngIf="listadoReparto.data.length > 0">
+                    <div class="item" *ngFor="let peliEstreno of listadoReparto.data">
+                        <img src={{peliEstreno.imagenUrlProfile}} alt="" width="150px" >
+                        <p>{{peliEstreno.name}}</p>
+                    </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>

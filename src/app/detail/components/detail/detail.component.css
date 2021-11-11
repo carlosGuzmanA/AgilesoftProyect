@@ -1,0 +1,32 @@
+
+.row{
+    align-items: center;
+    width: 1000px;
+}
+
+.wrapper{
+    max-height: 120px;
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+    display: none;
+}
+.wrapper .item{
+    min-width: 200px;
+    width: 800px;
+    height: 300px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 2px;
+    margin-left: 0x;
+    
+}
+
+.item{
+    margin-right: 3px;
+}

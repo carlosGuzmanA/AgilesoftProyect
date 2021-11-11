@@ -1,0 +1,32 @@
+<h1>Películas en estreno</h1>
+<br>
+
+<div class="wrapper" *ngIf="peliculasEstrenos.data.length > 0">
+    <button role="button" id="flecha-izquierda" (click)="flechaIzquierda()" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+    
+        <div class="item" *ngFor="let peliEstreno of peliculasEstrenos.data ">
+            <img src={{peliEstreno.imagenUrl}} alt="">
+        </div>
+    
+    <button role="button" id="flecha-derecha" (click)="flechaDerecha()" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+</div>
+<br>
+<h1>Películas más populares</h1>
+<br>
+<div class="row" style="height: 90%" *ngIf="peliculasPopular.data.length > 0">
+        <div 
+            class="col-md-3 " 
+            *ngFor="let peliPopular of peliculasPopular.data"
+            infiniteScroll
+            [infiniteScrollDistance]="2"
+            [infiniteScrollThrottle]="1000"
+            (scrolled)="onScroll()"
+            >
+            <mat-card  (click)="mostrarData(peliPopular)">
+                <img mat-card-image src={{peliPopular.imagenUrl}}>
+                <mat-card-title style="text-align: center;">{{peliPopular.title}}</mat-card-title>
+              </mat-card>
+    
+              <mat-spinner *ngIf="spinner" style="margin: 0 auto" [diameter]="30"></mat-spinner>
+        </div>
+</div>

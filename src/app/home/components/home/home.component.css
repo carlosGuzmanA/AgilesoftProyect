@@ -1,0 +1,84 @@
+
+
+.wrapper{
+    max-height: 220px;
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+    display: none;
+}
+.wrapper .item{
+    min-width: 210px;
+    height: 210px;
+    line-height: 210px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 2px;
+    margin-left: 0x;
+    
+}
+
+.flecha-derecha {
+    max-height: 220px;
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	/* height: 50%; */
+	/* top: calc(50% - 25%); */
+    height: 210px;
+	line-height: 210px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+.flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+.flecha-derecha {
+	right: 0;
+}
+.flecha-izquierda {
+    max-height: 220px;
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	/* height: 50%; */
+	/* top: calc(50% - 25%); */
+    height: 210px;
+	line-height: 210px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+.flecha-izquierda:hover {
+	background: rgba(0,0,0, .9);
+}
+.flecha-izquierda {
+	left: 0;
+}
+.card-populares{
+	width: 100px;
+	margin-top: 10px;
+	margin-right: 2px;
+}
+.search-result{
+	height: 20rem;
+	overflow: scroll;
+}
+::ng-deep .mat-card{
+
+    border: 55px solid #000;
+    border-radius: 10px !important;
+    border: #000 !important;
+	box-shadow: #000;
+	z-index: 10;
+   }
